@@ -6,9 +6,15 @@
     "prettier",
     "plugin:jsx-a11y/recommended"
   ],
-  "parser": "@babel/eslint-parser",
-  "parserOptions": { "requireConfigFile": "false" },
-  "babelOptions": { "configFile": "./.babelrc" },
+ "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "ecmaFeatures": {
+      "globalReturn": false
+    },
+    "babelOptions": { "configFile": "./.babelrc" }
+  },
   "env": {
     "browser": true,
     "node": true,
